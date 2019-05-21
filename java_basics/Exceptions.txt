@@ -1,0 +1,34 @@
+Exceptions in Selenium
+=====================
+
+1. IllegalStateException: -  The path to the driver executable must be set by the webdriver.gecko.driver system property;
+
+	System.setProperty("webdriver.gecko.driver", "path of the driver executable file");
+
+2. WebDriverException: - SafariDriver requires Safari 10 running on OSX El Capitan or greater.
+
+	Upgrade/Degrade the browser version as per the Driver version
+
+3. WebDriverException: - unknown error: cannot find (browsername) binary
+
+	User need to set the binary with the (browser)Options class
+
+4. NoSuchElementException:- Unable to locate element:
+
+	Change the locator and value
+
+5. UnSupportedOperationException
+
+	The Type of element was differ with the operation
+
+
+
+
+
+
+
+
+
+
+
+

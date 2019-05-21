@@ -1,0 +1,1732 @@
+Testing
+-----------
+
+Testing ==  Verifying + Validation
+
+
+Software Testing
+-----------------
+
+	Application
+		|
+	No.of Modules
+		|
+	No.of Functionalities
+
+
+Which functionalities? -- Test Scenario
+
+
+How to test scenatio? --- Test Cases
+
+			Test Data -- pass/fail
+
+
+Automation
+-------------
+
+tools
+
+
+build1 -- 5 functionlaities
+
+	40 Test Cases--- few cases randomly -- 10 testcases -- pass
+
+
+1
+
+2
+3
+4
+5
+6 -- fail -- defect -- retesting
+
+7
+8
+9
+10
+
+
+
+40
+
+
+
+Smoke: Test the few test cases which are related to complete build functionalities
+
+Retesting: Test only the failed test case in the previous build
+
+Sanity: Test the few testcases from the passed one which are related to the failed test case
+
+Regression: Test the all the passed testcases again until the failed test case
+
+
+
+Automation Tool
+----------------
+
+1. Type of application
+
+	1. Window based
+
+	2. Web-based
+
+	3. Mobile
+
+	4. Native
+
+	5. Command/ WebServices
+
+2. Resource knowledge (Programming)
+
+3. Environment
+
+4. Record
+
+
+Selenium
+------------------
+
+--> Selenium is a functional automation tool
+
+--> Selenium can support only the web-based applications
+
+--> As per the selenium organization the default browser for the selenium is firefox
+
+--> Selenium can be available as a files
+
+--> The selenium files are available at http://www.seleniumhq.org
+
+
+Advantages
+-----------------
+
+--> It is open source and free of cost
+
+--> Platform Independent (Supports all the Operating Systems)
+
+--> Supports all the browsers
+
+--> Supports multiple programming languages to develop the test scripts
+
+	(Java, C#, PHP, Perl, Python, Ruby and JavaScript)
+
+--> Supports the parallel execution
+
+
+Disadvantages
+-------------------
+
+--> It doesn't support all the types of applications except web-based
+
+--> It doesn't have any predefined libraries (structure)
+
+--> It doesn't supports the Images handling
+
+
+
+List of elements
+---------------------------
+
+ Text boxes/Edit box
+
+ buttons
+
+ radio button
+
+ checkbox
+
+ link
+
+ images
+
+ dropdowns
+
+ listboxes
+
+ plaintext
+
+ calenders
+
+
+Selenium Components/Tools
+-------------------------------
+
+1. Selenium IDE
+
+2. RC (Remote Control) / Selenium 1
+
+3. WebDriver / Selenium 2 and 3
+
+4. Grid
+
+
+Automation Tool Specifications
+-----------------------------------
+
+1. Setup file
+
+2. Need an editor to develop the test script / programs
+
+3. It has one programming language internally
+
+4. Supporting files which are related to the program execution
+
+5. Console needed to display the results -- pass/fail
+
+6. editor need to allow the modification when it has fail
+
+7. Record option
+
+
+Selenium IDE (Integrated Development Environment)
+----------------------------------------------------
+
+--> Selenium IDE is a record option
+
+--> It is available as a plug-in/add-on
+
+	IDE-version	supporting-browser
+	-----------	------------------
+
+		2 		firefox (47)
+
+		3		firefox and chrome
+
+
+
+REmote Control (RC) / Selenium 1 drawbacks
+-----------------------------
+
+1. The test script will not communicate to the elements directly
+
+2. It should not handle the alerts
+
+3. It should not handle the window scrolling
+
+4. It should not handle the images
+
+
+WebDriver / Selenium 2
+--------------------------
+
+Selenium 2 version can support RC along with webdriver
+
+webdriver / selenium 3
+------------------------
+
+Removed the RC files 
+
+
+Grid
+------
+
+--> It can be used to execute the webdriver script in parallel
+
+
+
+
+WebDriver
+--------------------------------------
+
+--> User need to develop the script/program to test the application functionalities
+
+--> To develop the script user need the programming language
+
+	(Java, C#, PHP, Perl, Python, Ruby and JavaScript)
+
+
+Java s/w
+------------------
+
+platform independent (supports all the operating systems)
+
+	windows - .exe
+
+	linux	- .tar
+
+	mac	-  .dmg
+
+--> Each OS has two bit versions except mac
+
+	32(x86) - bit
+
+	64	- bit
+
+--> Java s/w can be download and install as per the bit version of OS
+
+
+	OS - Bit	java bit-version
+	--------	------------------
+
+	32 bit		32 bit
+
+	64 bit		either 32 or 64
+
+Note: After successful installation of java user need to create the environment path to access the JRE files from any 	location of the system
+
+
+1. Creating the java home variable
+----------------------------------
+
+	variable_name: JAVA_HOME
+
+	variable_Value: path of the jdk folder (C:\Program Files (x86)\Java\jdk1.8.0_201)
+
+2. creating path varibale
+-----------------------------
+
+	variable_name: path (Already exists just u select and edit the value)
+
+	variable_value: path of the bin folder which is available in JDK (C:\Program Files (x86)\Java\jdk1.8.0_201\bin)
+
+
+Error: java command is not recognized as an internal or external command
+
+
+
+
+Eclipse editor
+---------------
+
+--> Eclipse can be depends on the java s/w
+
+--> Eclipse bit version and java bit version must be match to open the eclipse
+
+
+	OS-bit		java s/w bit		eclipse bit
+	-------		------------		-----------
+
+	32			32			32
+
+	64		either 32 or 64		as per the java bit version installation
+
+
+
+	JAVA SE (Standard)
+
+	JAVA EE (Web-based)
+
+	J2ME	(Mobile)
+
+
+
+
+
+	Project/Application			Java project
+
+		|					|
+	No.of Modules					packages
+
+		|					|
+
+	No.of Functionalities				classes				
+
+
+
+Java languge
+------------------------
+
+--> Java is a case-sensitive language
+
+--> the structure of the java language is class(es)
+
+class
+------------
+
+--> Each and every class it must has a specific name
+
+--> Class name must be starts with an uppercase alphabet, single word and unique(single package)
+
+--> The class is a blue print/ template / collection of Objects
+
+--> A class is a collection of data-members(Variables) and operations(Methods)
+
+Note:
+-----
+
+--> Class will be executed only when it must be need one predefined method with the name of main()
+
+--> The main() method structure is also predefined in JVM. So it won't allow any changes in it
+
+	public static void main(String[] args) {
+
+	}
+
+--> When a class is executed then it will execute the statements which are written in the main() method only
+
+
+
+Variable (data member)
+------------
+
+--> A variable is a reference/address of the data in the memory
+
+--> variable name must be userdefined, starts with lower case letter, singleword and unique
+
+--> defaultly the variable can be store single value
+
+--> The variable can be reserve the memeory space based on the data-type
+
+--> The memeory will be allocated for a variable only when it has initialized with a value
+
+
+DataTypes
+--------------
+
+--> The data types are be initiated the memeory for the varible
+
+--> The data types are decided what type of data has to store in the variable
+
+--> The different types data types are:
+
+	1. Primitive DataTypes
+
+	2. Derived DataTypes
+
+	3. UserDefined DataTypes
+
+
+Primitive DataTypes
+-----------------------
+
+--> The data types which are defaultly avaialble in the programming language
+
+	byte, boolean, int, short, long, float, double, char
+
+	
+	byte 	- 1 byte (8 bits)
+
+	boolean	- 1 bit
+
+	int	- 4 bytes
+
+	short	- 2 bytes
+
+	long	- 8 bytes
+
+	float 	- 4 bytes
+
+	double	- 8 bytes
+
+	char	- 2 bytes
+
+
+To store the numbers (whole)
+----------------------
+
+	byte - 1 to 127
+
+	int, short and long
+
+To Store the decimal point values
+----------------------------------
+
+	float, double
+
+--> Bydefault the java language will be treat the decimal values as a double
+
+--> If user need to store the decimal value as a float then user has to declare the "f" character at the end of value
+
+
+To store the character (Alphabet, single digit, special character)
+-----------------------------------------------------------------------
+
+--> To store the alphabet character user can use the "char"
+
+--> The "char" can be allowed to store only one character at a time and the character must be enclosed in a single quotes
+
+
+
+2. Derived DataType
+--------------------------
+
+--> The data type which is derived based on the primitive data type, to store the multiple values of same type
+
+--> To store the multiple values in a single variable we can be use -- Array (notation - [] )
+
+--> The size of an array must be specify by the user at the time of declaration.
+
+Limitations of array
+-----------------------
+
+--> It will store the homogenous (Same) type of values
+
+--> The size of an array is fixed as per the initializtion at the time of declaration
+
+
+User Defined Data Type
+-------------------------
+
+--> The data types which are given by the programmer to give some specific features
+
+--> The variable which can hold userdefined data type can be store multiple values either same type or different type
+
+--> These are achieved by an reference_Object of a class(es)
+
+
+
+Method(s)
+----------------
+
+--> Method is a collection of an individual statements as a single group to make a specific operation
+
+Note: Defaultly each user defined class it must has one predefined method with the name main() and remaining are all be 		the user-defined methods
+
+--> Whatever the operational statements has been declared in the main() method those are be executed in a sequential order
+
+--> The Operational statements which are written in the main() method are be executes only once
+
+Note: If user need to execute the one specific operation(s) multiple times when class executed then, user need to declare 	the operation statements in a user-defined method.
+
+--> The purpose of declaring userdefined method(s) in a class is "reusability"
+
+--> Always the userdefined methods can be declare in a class body and outside of the main() method body
+
+--> The declare the user defined method we have a specific structure/signature as follows:
+
+	<Access_Specifier> <ReturnType> <MethodName>() {
+
+	}	
+
+Note: As per the class structure/behaviour it will execute the statements which are written in the main() method. But user 	can declare userdefined methods at outside of the main() to execute those functionalities multiple times. To 			execute userdefined methods of a class user need to create an "Object" to the class in the main() method. With the 	reference of that object user can call the userdefined methods into main() method.
+
+--> To Create an object to the class user has to follow the signature:
+
+	<className> <obj-Reference> = new <className>
+
+
+
+MethodName
+----------------
+
+--> Each and every method can be identified by the user with the method name.
+
+--> Method Name can be userdefined. but, the standard way is user can declare method name as the functionality name what 		are implementing in the body.
+
+--> Method name must be the functionality name, starts with lowercase letter, singleword followed with the paranthasis
+
+	eg: addition()	// valid
+
+	    addition of two numbers()  // Invalid
+
+	    additionOfTwoNumbers()	// valid
+
+
+ReturnType
+------------------
+
+--> The return type of the method will be decide to whom the result of the functionality has to give
+
+--> The possibilities are: either to end-user or to the method itself
+
+--> The defult returnType of every userdefined method is "void". It won't be return the result to anyone
+
+--> Because of this reason user has to declare the output statement explicitly to display the result to enduser in the 			method body itself
+
+	void addition() {
+		
+		int a = 98;
+		int b = 23;
+		int result = a + b;
+		System.out.println("Addition:"+result);
+	}
+
+--> IF the result of the functionality has to store in the method area then user can replace the default return type 		"void" with the data type which can hold the result variable.
+
+	int mul() {
+
+	}
+
+--> The result of the functionality will be store in the method with the declaration of "return" keyword followed with the 	result variable in the method body
+
+	int mul() {
+
+		int a = 34;
+		int b = 34;
+		int c = a*b;
+		return c;
+	}
+
+--> To display the result in the method area user has to assign the method to another variable and display the variable 		data with the output statement declaring at main() method
+
+		int result = obj.mul();
+		System.out.println(result);
+
+
+
+Access_Specifier
+-----------------------
+
+--> The purpose of userdefined method is "reusability".
+
+	declaration -- only once
+
+	execution -- no.of times as per the user requirement
+
+--> The access_specifier of a method will be decide the "scope"/ boundary of the method execution
+
+--> The basic accessSpecifiers are:
+
+	AccessSpecifier		Scope
+	---------------		------
+
+	public			project
+
+	private			class
+
+	protected		package
+
+Note: If user can't declare any accessSpecifier to the method at declaration level then the compiler will assign one 		accessSpecifier internally with the name of "default"
+
+	default		package/sub-class
+
+
+
+Object
+-----------
+
+--> For a single class user can declare no.of Objects.
+
+--> Object is a reference of a class in the memory
+
+--> Object will be created by the "new" keyword and "constructor" of it's class
+
+--> The signature to declare the object is:
+
+
+	className Obj_reference = new ClassName();
+				   |		|
+				   |		|
+
+				Keyword		constructor
+
+--> New keyword will be initiate the memory to an object
+
+--> Constructor will be initialize the object memeory with the class
+
+Note: Object_referene name can be user defined (User can declare anything)
+
+
+
+Differences between class and Object
+----------------------------------------
+
+	class						Object
+
+1. class is a container. Collection of		1. Object is a reference/instance of a class
+   variables and methods
+
+2. No memory is allocated at the time of	2. Sufficient memory space will be allocated for all the variables and
+   declaration						methods of a class
+
+
+3. One class definition should be exists 	3. For a single class multiple objects can be created
+	only once
+
+
+
+Constructor
+---------------
+
+--> Constructor is a special type of method in class
+
+--> Constructor will be initializing the object with a class
+
+--> Constructor name must be equal to the class Name
+
+
+Differences between the method and constructor
+-----------------------------------------------------
+
+	Method					Constructor
+	-------					------------
+
+1. Method name must be declare as		1. Constructor name must be equal to the className
+	functionality name
+
+2. Method has return type as per the		2. Constructor doesn't have any return type
+	user requirement
+
+3. AccessSpecifier for a method can be		3. AccessSpecifier for the constructor is always public
+userdefined(public, private, protected)
+
+
+4. Method is used to define the functionality	4. Constructor is used to create/initialize the Object of a class
+
+5. Methods of a class can be execute as many	5. Constructor can be executes only once
+   no.of times that user needs
+
+6. Methods execution can be done by the Object	6. Constructor can be executes directly when it initialize the object
+
+	reference of a class
+
+
+Types of Constructors
+-------------------------
+
+1. Default Constructor (No arguments)
+
+	Ex: className() {
+ 		
+		}
+
+2. parameterized Constructor
+
+	Ex: ClasssName(parameters) {
+
+	
+		}
+
+
+Types of Variables
+-------------------
+
+--> Variable is a reference/address of the data in the memeory
+
+--> The purpose of variable is to store the user data as per the data type declaration
+
+--> Memory can be created for a variable when it has initializes with data
+
+Note: As per the declaration of variable position we have the different names:
+
+1. Local Variable
+
+2. Global variable/Instance variable
+
+3. static variable / Class Variable
+
+4. final variable
+
+
+Local Varibale:
+===============
+
+--> The variable which is declared inside a method body is called as local variable
+
+--> Local variables can be used no.of times with in the method itself. It can't access from outside of method body
+
+--> No default values for the local variable
+
+--> User must be initialize the local variable with the data at the time of declaration
+
+
+Global Variable
+===============
+
+--> The variables which are declared inside a class body and outside of all the methods (including main() also)
+
+--> global variables are initializes with the default values by the constructor as per the data type declaration
+
+--> Use the global varible anywhere:
+
+	--> in a class with the same value or different values as per the initialization
+
+	--> Outside of a class either classname or object reference of a class w.r.to the access Specifier
+
+
+Static Variable
+===============
+
+--> The variable which can be declare with the "static" keyword as a prefix to the data type then the variable is static 		variable
+
+--> It can be allowed to declare only for the global variables
+
+--> While allocating the memeory for the variables by the object first priority has to given for static
+
+--> Static variables can be used from outside of the class directly with the className ( No need to create any Object)
+
+
+final variable
+==============
+
+--> The variable which can be declare with the "final" keyword as a prefix to the data type then the variable is final		variable
+
+--> The final variable name must be in Uppercase
+
+--> It can be allowed to declare for the global and local variables
+
+--> For the final variables user must be initialize with some value at the time of declaration itself
+
+
+Types of Methods
+==================
+
+
+<A.S><RT><MN>() { }
+
+
+--> Instance Method/Generic Method
+
+--> static method
+
+--> final Method
+
+--> abstract Method
+
+--> Concrete Method
+
+
+Instance Method
+===============
+
+--> The methods which are declare with the basic (default) signature then we called as generic / instance method
+
+	<A.S><RT><MN>() { }
+
+--> It can allow to declare - local and final variables
+
+--> It can access -- local,final,global and static
+
+--> Execute with the Object reference
+
+
+Static Method
+=============
+
+--> The Generic method can be declare with the "static" keyword as a prefix to the return type then the method is static 		method
+
+--> When we can declare static for the generic method?
+
+	If user need to access the method without any object reference then make it as static
+
+--> Static method can be access by using the "className"
+
+--> It can be access defaultly the variables which are declared inside the method (local and final)
+
+--> It can allow to access the global variable only when it has declare with static keyword
+
+
+Final Method
+============
+
+--> The Generic method can be declare with the "final" keyword as a prefix to the return type then the method is final 			method
+
+--> When we can declare final keyword for a method?
+
+	When user don't want to override the method implementation then make the method as final
+
+--> It can allow to declare - local and final variables
+
+--> It can access -- local,final,global and static
+
+--> Execute with the Object reference
+
+
+Abstract Method
+================
+
+--> The Generic method can be declare with the "abstract" keyword as a prefix to the return type then the method is 			abstract method
+
+--> When we can decalre abstract keyword for a method?
+
+	If user can't be given complete implementation of a functionality then make that method as abstract
+
+Note: Abstract method don't allow method body. To overcome this user can declare semicolon(;) after the paranthasis
+
+--> Abstract method can't allow to execute. Because it doesn't have the body (implementation)
+
+
+Concrete Method
+===============
+
+--> The method(s) which can be declare with complete implementation then we can call as Concrete method
+
+Note: Except abstract method(s) all the other type of methods are be called as concrete method
+
+
+
+Types of classes
+------------------------
+
+1. Generic class
+
+2. static class
+
+3. final class
+
+4. abstract class
+
+5. wrapper class
+
+
+Generic class
+---------------------
+
+--> The class which is declared by the user defaultly is called as generic class
+
+	public class <className> {
+
+	}
+
+--> It can allow to declare and access the all the types of variables
+
+--> Except an abstract method user can declare and access the methods with the Object reference or className
+
+Note: Generic class has only concrete methods. It won't allow abstract methods
+
+Static class
+--------------------
+
+--> A class which is declare with the "static" keyword then it static class. But user can't declare the static class 	directly
+
+--> Static class can declare as nested class (inside) to the generic class 
+
+--> static class doesn't have main() method
+
+--> Inside the static class all the properties (variables & Methods) can be declare as static then only it can be 	accessable.
+
+--> All the properties of static class can be accessed with the static class name.
+
+Final class
+-------------------
+
+--> A class which is declare with the "final" keyword then it final class.
+
+Q) When we can declare final keyword to the generic class?
+
+--> Whenever user don't want to inherit the properties into child class then make the generic class as final class by 	declaring the final keyword
+
+
+Abstract Class
+---------------------
+
+--> For an instance class if user can declare the "abstract" then it is final class
+
+--> In an instance class if any one method can have the abstract then the total class must be an abstract
+
+--> For an abstract class user won't be create the instance(Object). It means user can't executes the abstract class
+
+
+Wrapper class
+--------------------
+
+--> In java, The predefined classes which names are equal to the primitive data-types are called as wrapper classes
+
+	byte	- Byte
+	boolean	- Boolean
+	int	- Integer
+	short	- Short
+	long	- Long
+	float	- Float
+	double	- Double
+	char	- Character
+
+--> Wrapper classes are be used to convert the variable data to an Object and Object data to variable
+
+		or
+
+--> Converting the one type of data to another type by passing the value with the constructor or using the "parsexxx" 		method
+
+
+OOP's Features
+----------------
+
+	Datahiding
+
+1. Abstraction
+
+2. Encapsulation
+
+3. Inheritance
+
+4. Polymorphism
+
+
+Abstraction:
+=============
+
+--> Hididng the internal implementation of a functionality to an enduser
+
+--> JUst as an enduser we are using the services what application has. User doesn't know about the implementations
+
+	ex:	public void add() {
+		int a = 89;
+		int b = 23;
+		int c = a+b;
+		System.out.println(c);
+	}
+
+
+Encapsulation
+=============
+
+
+--> Combining the enduser data with an implementation of a functionality to perform the specific operation
+
+	ex: public void add(int a, int b, int c) {
+		int d = a+b+c;
+		System.out.println(d);
+	}
+
+
+
+Inheritance
+============
+
+--> Acquiring/Accessing the properties(Variables+Methods) of one class into an another class
+
+--> Inheritance can be possible between the classes only when it has the relationship in between them
+
+--> The relationship can be given between the classes in two ways:
+
+	1. extends
+
+	2. import
+
+Note: The class which has declare the properties -- parent / main class
+
+	The class which can be inheriting the properties -- child/ sub class
+
+Note: Always the relationship keywords can be declare in the child / inheriting class
+
+
+extends
+==========
+
+--> When the parent and child classes are available in the "same package" then user can be give the relationship by using 		the "extends" keyword
+
+--> extends keyword can be declare an adjacent to the child className followed by the parent className
+
+--> Access the non-static properties of both classes with the child class object reference
+
+--> Access the static properties with their className
+
+
+import
+==============
+
+--> When the parent and child classes are available in the "different package" then user can be give the relationship by 		using the "import" keyword
+
+--> Declare the import keyword in child class on top of the class declaration and below the package declaration with the 	following signature
+
+	import packageName.className;
+
+--> To access the properties of classes user need to create Object(s) for individual classes. It means
+
+	child class object --> access only child class properties
+	parent class object --> access only parent class properties
+
+
+Polymorphism
+==================
+
+	poly = many
+
+	morphism = ways/ approaches
+
+--> Polymorphism can be achieve by using the
+
+	method overloading / Static / Compiletime Polymorphism / early binding
+
+	method Overriding / Dynamic / Runtime Polymorphism / late binding
+
+
+Method OverLoading
+======================
+
+--> Method OVerloading means providing two or more methods in a class with the same name but different arguments
+
+--> In three ways we can achieve the method overloading
+
+1. Number of arguments/parameters
+
+2. Data type of parameters
+
+3. sequence of DataType of parameters
+
+Rules for method Overloading
+===============================
+
+1. Method Name must be same
+
+2. Different argument list
+
+Note: Method overloadded methods must follow the above rules then may or may not follow the below rules
+
+3. Methods have different return type
+
+4. Methods have different accessModifier
+
+5. throw different checked or unchecked exceptions
+
+Q) When user can choose method-Overloading?
+================================================
+
+--> When user wants to provide the data in different formats/types for the same functionality
+
+
+Method OVerriding
+====================
+
+--> Method Overriding means defining a method with the same signature along with argument list and type
+
+--> Method OVeriding can always be declare in the child/inherited class
+
+--> To identify easily override method in child class user can declare @Override annotation on top of method
+
+
+Q) When user can choose method-Overriding?
+================================================
+
+--> When user doesn't satisfies with the implementation of parent then user can override the same method with different 	implementation in the child class.
+
+
+Rules for Method OVerriding
+================================
+
+1. Method name must be same
+
+2. method arguments also be same
+
+3. It must have the same return type
+
+4. It must not have a more restrictive access modifier (optional)
+
+	(if parent --> protected then child --> private is not allowed)
+	(if parent --> public then child --> private and protected are not allowed)
+
+5. It must not throw new checked exceptions
+
+Note: Constructors are not allowed to Override
+
+Remember the points
+=====================
+
+1. Only inherited methods can be Overridden. It means, Overriden only in the child classes
+
+2. Constructors and private methods are not inherited, so they can not be override
+
+3. Abstract methods must be overridden by the first Concrete(Not abstact) sub class
+
+4. A sub class ca be use super.Overridden_method() to call the super class version to overriden method
+
+
+Differences between Overloading and overriding
+======================================================
+
+	overloading						overriding
+	------------						-----------
+
+1. Provides functionality to reuse method name for	1. Provides functionality to override a behavior which the class
+	different arguments					have the inherited from the parent class
+
+2. It can be done in the same class			2. It can be done in the different class
+
+3. must have the different argument list		3. Must have same arguments list
+
+4. Constructors are allowed to overload			4. Constructors not allowed to override
+
+5. May have the different return type			5. must have the same return type
+
+6. May have different access modifiers			6. Must not have more restrictive access modifier but have less 								access modifier
+
+7. May throw different exceptions			7. Must throw the same exceptions
+
+
+
+Interface
+================
+
+--> Interface is a java feature. It can be introduced to support/ allow the multiple inheritance in java.
+
+--> Interfaces will provides more sharability in java applications when compared with classes and abstract classes
+
+--> Interface can allow only abstract methods
+
+--> Bydefault, all the variables are public,static and final
+
+--> Bydefault, all the methods are public and abstract
+
+--> For an interface, we are able to create only the reference variable(s). we are unable to create Objects
+
+--> Constructors are possible in classes and abstract classes but not in interfaces
+
+
+Note
+------
+
+1. If we declare any interface with an abstract methods then it is convention to declare an implementation class for the 		interface and it is convention to provide implementation for all the abstract methods in implementation class
+
+2.If we declare an interface with an abstract methods then it is mandatory to provide implementation for all the abstract 		methods in the respective implementation class.
+
+		In this context if we provide implementation for some of the methods at the respective impelementation 			class then compiler will raise an error. To resolve the compilation error we have to declare the respective 			implementation class as an abstract class and we have to provide implementaion for the remaining abstract methods 		by taking a sub class for the abstract class.
+
+3. It is not possible to extend more than one class to a single class. But it is possible to extend more than one 			interface into a single implemetation class.
+
+4. It is possible to implement more than one interface in a single implementation class.
+
+
+New Features for an interface from 1.8 version
+=================================================
+
+1. default methods
+
+2. Static methods
+
+3. Functional Interface
+
+
+Default Methods
+==================
+
+--> In general, if we can declare abstract methods in an interface then we have to implement all the interface methods in 		multiple classes with variable implementation part.
+
+--> In this context, if we require any method implementation common to every implementation class with fixed 				implementation then we have to implement that as a default method in an interface
+
+--> To declare the default methods in an interface user has to declare the "default" keyword as an accessModifier for the 		method.
+
+	Ex: default void m1() {
+
+	    }
+
+Note:
+======
+
+1. It is possible to provide more than one default method with in a single interface
+
+2. It is possible to override default methods of an interface in the implementation classes
+
+
+Static Methods
+===================
+
+--> Upto java 7 version, static methods are not possible in interfaces. But from java8 version static methods are possible 	in interfaces in order to improve sharability
+--> If we declare static methods in the interfaces then it is not required to declare any implementation class to access 		the static methods. we can use directly with the interface name.
+
+
+	ex: static void m1() {
+
+	    }
+
+Note:
+=======
+
+1. We have to access static methods by using only interface name not even by using interface reference variable
+
+
+2. In Java8 version, interfaces will allow concrete methods along with either "static" or "default" keywords
+
+
+Functional Interface
+========================
+
+--> If any java interface allows only one abstract method then it is called as "Functional Interface"
+
+--> To make any interface as functional-interface then we have to use the following annotation just above the interface 		declaration
+
+		@FunctionalInterface
+
+ex: @FunctionalInterface
+	public interface <Interface_Name> {
+
+		public abstract void m1();
+
+	}
+
+Note: In Functional-interface we have to decalre only one abstract method but we can declare any no.of default and static 		methods
+
+
+Q) Difference between abstract class and Interface?
+=====================================================
+
+		Abstract class					Interface
+		--------------					---------
+
+1. If we are talking about an implementation but not	1. If we don't know anything about the implementation just, we 
+   completely then we should go with abstract class		have the requirement specification then we can go with an
+								interface
+
+
+2. Abstract class can has the concrete methods along	2. All the methods of an interface are an Abstract (defaultly)
+   with an abstract methods
+
+3. There is no restriction for abstract class methods	3. We can't declare interface methods with the private and 		access Modifiers(public,private,protected)		protected accessmodifiers. Always it should be public
+
+4. The variables present inside an abstract class need	4. Every variable present inside an interface is always 
+	not be public, static and final				public,static and final whether user can declare or not?
+
+5. We can declare the constructor. which will be execute 5. We can't declare constructor
+	at the time of child class object creation
+
+6. We can execute the abstract class methods with the	 6. We can execute the interface methods with the reference of an
+	reference of child class object				interface for the child class object
+
+
+
+Q) Difference between Collection and Collections?
+=====================================================
+
+		Collection					Collections
+		----------					------------
+
+1. Collection is an interface which can be used to 	1. Collections is an utility class present in java.util package
+	represent the group of individual Objects		to define several utility methods (like sorting,searching
+	as a single entity.					..etc) for collection object
+
+
+
+Array limitations
+------------------------
+
+1. fixed in size (Static)
+
+2. stores the homogeneous values
+
+
+--> The limitations of an array can be overcome with collection
+
+	1. ArrayList
+
+	2. List
+
+	3. Set
+
+ArrayList:
+==============
+
+--> An ArrayList is a re-sizable array, also called a dynamic array. It grows its size to accommodate new elements and 			shrinks the size when the elements are removed.
+
+--> ArrayList internally uses an array to store the elements. Just like arrays, It allows you to retrieve the elements by 		their index.
+
+--> Java ArrayList allows duplicate and null values.
+
+--> Java ArrayList is an ordered collection. It maintains the insertion order of the elements.
+
+--> You cannot create an ArrayList of primitive types like int, char etc. You need to use boxed types like Integer, 			Character, Boolean etc.
+
+
+
+Q) Differences between List and Set?
+
+
+	List					Set
+
+1. Maintains the insertion Order	1. Doesn't maintain insertion Order
+
+2. Allows Duplicate values		2. won't be allow duplicate values
+
+3. Allows any no.of "Null" values	3. Allows single "Null" value
+
+4. Implements ArrayList and LinkedList	4. Implements HashSet,LinkedHashSet,TreeSet
+
+
+Conditional Statements
+==========================
+
+--> To validate the specific operations we are using the conditional statements
+
+1. if-else
+
+2. Nested if
+
+3. switch-case
+
+
+if-else
+===========
+
+Syntax: 	if(condition) {
+
+			// Condition is true
+		}
+		else{
+			// Condition is false
+		}
+
+--> When user need to check the condition only once then use the if-else
+
+--> If block will be execute only when the condition is true
+
+--> else block will be executes when the condition is false
+
+
+Nested if-else
+=================
+
+--> User can declare one or more if-else blocks inside an one if block
+
+Syntax:
+	if(condition==1) {
+		// Condition 1 is true;
+		if(condition==2) {
+			// Condition 1 and 2 are true;
+		}
+		else if(condition==3) {
+			// Condition 1 is true, Condition 2 is false and Condition 3 is true;
+		}
+		else if(condition==4) {
+			// Condition 1 is true, Condition 2 and 3 are false and Condition 4 is true;
+		}
+	}
+	else {
+		// Condition 1 is false;
+	}
+
+--> When user have the no.of conditions, each condition was checking only once and depends on one each other
+
+
+
+
+
+	if(condition) {
+
+		// +ve 
+		
+	}
+
+	else {
+
+		// -ve
+	
+	}
+
+Loops
+==========
+
+1. for
+
+2. while
+
+3. do-while
+
+--> The purpose of loop is to execute the block of statements multiple times
+
+for
+=======
+
+--> When user knows the upper(Max) limit
+
+--> For is always used based on count
+
+
+	for(intialization;condition;increment/decrement) {
+
+		// Statements
+
+	}
+
+Execution
+===============
+
+	min - based on condition (0 or more)
+
+	max - as per the limit
+
+
+While
+================
+
+--> When user need to execute a  block of statements until the condition was false (infinite loop)
+
+
+	initialization;
+
+	while(condition) {
+		// statements
+	}
+
+Execution
+===============
+
+	min - based on condition (0 or infinite)
+
+	max - until the condition was false (infinite)
+
+
+
+Do-while
+=============
+
+--> When user need to execute a block of statements minimum 1 time irrespective of the condition
+
+	intialization;
+
+	do {
+
+	// statements
+
+	}
+	while(condition);
+
+Execution
+===============
+
+	min - One time (1 or infinite)
+
+	max - until the condition was false (infinite)
+
+
+
+Exception Handling
+==========================
+
+
+Error
+=========
+
+--> Error is a problem in java application
+
+--> There are two types of errors
+
+	1. Compiletime Error
+
+	2. Runtime Error
+
+Compiletime Errors:
+=====================
+
+--> The problems identified by the compiler at the time compilation
+
+--> There are three types of compiletime errors
+
+1. Lexical Errors: Mistakes in Keywords
+
+2. Syntax Errors: General or Syntatical Errors
+
+3. Semantic Errors: Providing Operators in between in-compatible types
+
+
+Runtime Error
+==================
+
+--> The problems which are unable to provide solutions programatically and these errors are not identified by the compiler
+	and these errors are occured at the time of runtime.
+
+Ex: Insuffiencient memory, JVM internal error, Unavailable of Java components... etc
+
+
+Exception:
+===============
+
+--> Exception is a runtime error for which user can able to provide the solution(s) programmatically
+
+Ex: Arthematic Exception, ArrayIndxOutOfBoundException, NullPointerException... etc
+
+
+--> To overcome the above problems we have to handle the excecptions properly. To handle the exceptions properly we can 		use "exceptions handling"
+
+--> There are two types of exceptions
+
+	1. Predefined Exceptions
+
+	2. User-defined Exceptions
+
+Predefined Exception
+=====================
+
+--> The exceptions which are defined by java programming language
+
+
+--> Two types of predefined Exceptions:
+
+	1. Checked Exceptions
+
+	2. UnChecked Exceptions
+
+Note: All the predefined exceptions are be as a classes.Those all the classes are inherited the "Throwable" class
+
+
+Checked Exceptions
+========================
+
+--> The exceptions which are recognized/identified at the compile time but not occured at compile time
+
+	Ex: FileNotFoundException...etc
+
+UnChecked Exceptions
+=========================
+
+
+--> The exceptions which are not identified at compiletime, but these are identified at the time of runtime
+
+	Ex: ArthematicException
+
+
+
+throw:
+===========
+
+--> "throw" is a java keyword, it can be used to raise the exception intensionally by the user as per requirement of the 		functionality
+
+	Syntax: throw new ExceptionName("Message");
+
+Note: Always the throw keyword must be declared inside the method body
+
+
+--> There are two ways to handle the exceptions
+
+	1. throws
+
+	2. try-catch - finally
+
+
+
+throws
+=========
+
+--> throws keyword is used to bypass the generated exception from the present method or constructor to the caller method
+
+--> throws keyword will be used in method declaration not in method body
+
+--> throws keyword allows an exception className, it should be either same as generated exception or super class to the 		generated exception. It should not be the subclass to the generated exception
+
+--> throws keyword allows more than one exception in the method syntax
+
+--> throws keyword will be utilized mainly for checked exceptions
+
+
+try-catch-finally
+=====================
+
+--> In java applications, "throws" keyword is not really an exception handler. Because, "throws" keyword will by-pass the 		exception handling responsibility from present method to the caller method.
+
+--> If we want to handle the exceptions, the location where exception are generated then we have to use try-catch-finally
+
+
+	public static void main(String[] args) {
+
+		statement1;
+		
+		try {
+
+			statement2;
+			statement3;
+			statement4;
+		}
+		catch(Exception e) {
+
+			// Solution for the exception generated in the try block
+
+		}
+		finally {
+			// To close the resources which are used in the class
+		}
+		
+		statement5;
+		statement6;
+	}
+
+Exceptions Handling New features from java 7 version
+=======================================================
+
+1. Multi-catch block
+
+2. Try-with-Resources
+
+
+=======================================================================
+
+Selenium WebDriver
+========================
+
+--> Selenium webdriver is an API
+
+--> Selenium Webdriver will support different programming languages.
+
+--> Each programming language it has an individual selenium library files
+
+--> To write the selenium Script user must download the selenium library files based on the 	selection of programming language
+
+--> After downloading the files add those library files to the project in the eclipse
+
+
+Configuration of selenium with eclipse
+=========================================
+
+	RightClick on the Project --> Build Path --> Configure Build Path --> Select the Java BUild path from the left 	pane of properties window --> Select the libraries tab from right pane --> click on the Add external jars --> 		browse the location of downloaded selenium library files --> add all the Jar files which are available in the 		folder including sub-folders --> click on Apply and close.
+
+--> The added selenium library files are shown in the referenced libraries under the project
+
+
+Q) What is an WebDriver?
+
+	WebDriver is an interface in Selenium Library. The Webdriver interface abstract methods are implemented in browser  classes.
+
+
+
+	java (class)					html (tags)
+----------------------				--------------------
+
+public class <c.N>					< > </>
+{
+ p.s.v.main() {}				<tagname proprties/attributes> </tagName>
+
+}						<input id="" name="" class="" type=""> </input>
+
+						<tagname internal properties> xxxx </tagname>
+
+Locators
+============
+
+id
+name
+className
+tagName
+linkText
+partialLinkText
+xpath and 
+cssSelector
+
+
+--> To operate any element in selenium by using the script user need to identify that element 		with any one of the locator
+
+Types of Element		Opration Method			
+=================		================		
+
+Textbox/Edit box		sendKeys("")
+
+Button				click()
+
+Radio Button			click()
+
+Checkbox			click()
+
+link				click()
+
+Dropdown			Either by select or Actions class methods
+
+Listbox				Actions class Methods
+
+Image				As per the behaviour user can select the method
+
+
+
+Note: Usually the operations can be make on element with the "WebElement" Interface methods
+
+
+
+
+	FirefoxDriver driver = new FirefoxDriver();
+
+WebDriver Methods
+===========================
+
+--> Selenium WebDriver can be the browser automation tool
+
+--> The operations on browser can be done by the user with the methods of webDriver
+
+1. get(String Url)
+======================
+
+--> Used to launch the application by specifying the url as an argument
+
+	Ex: driver.get("Url");
+
+2. findElement(Locator)
+=====================
+
+--> It will return the single WebElement which has matches with the locator information in the 		page
+
+	Ex: driver.findElement(By.id("email"));
+
+3. findElements()
+=======================
+
+--> It will return list of Webelememts as per the locator information (either all the types of 		elements of a page / single type of element)
+
+	Single Type of elements -- tagName or xpath
+
+	All the elements of a page -- xpath
+
+
