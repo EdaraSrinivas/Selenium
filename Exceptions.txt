@@ -21,6 +21,8 @@ Exceptions in Selenium
 
 	The Type of element was differ with the operation
 
+6.ElementClickInterceptedException
+
 
 
 

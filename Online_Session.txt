@@ -1720,7 +1720,7 @@ WebDriver Methods
 
 	Ex: driver.findElement(By.id("email"));
 
-3. findElements()
+3. findElements(Locator)
 =======================
 
 --> It will return list of Webelememts as per the locator information (either all the types of 		elements of a page / single type of element)
@@ -1728,5 +1728,31 @@ WebDriver Methods
 	Single Type of elements -- tagName or xpath
 
 	All the elements of a page -- xpath
+
+4. close()
+============
+
+--> It will be used to close the active browser window which is opened through an automation
+
+
+5. quit()
+=============
+
+--> It will be used to close the all the browser windows of a session which are opened through 		an automation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
