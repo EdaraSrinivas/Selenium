@@ -21,7 +21,10 @@ Exceptions in Selenium
 
 	The Type of element was differ with the operation
 
-6.ElementClickInterceptedException
+
+6. ElementClickInterceptedException
+
+7.  ElementNotVisibleException: element not interactable
 
 
 

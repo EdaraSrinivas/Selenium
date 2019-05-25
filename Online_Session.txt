@@ -1740,6 +1740,64 @@ WebDriver Methods
 
 --> It will be used to close the all the browser windows of a session which are opened through 		an automation
 
+6. navigate()
+=================
+
+--> TO move in between the pages too and fro directions the following methods are used
+
+	back() -- it will opens the previous page to the existing page
+
+	forward() -- it will opens the forward page to the existing page
+
+	refresh() -- it will reload/refresh the existing page
+
+	to(String) -- to launch the application	
+
+	to(URL)	-- to launch the application
+
+Note: The above methods are available in the Navigation interface which is extends by the 		WebDriver
+
+
+7. getTitle()
+===================
+
+--> It will return the title of an active page in the browser
+
+8. getCurrentUrl()
+======================
+
+--> It will return the URL of an active page in the browser
+
+
+9. getPageSource()
+=======================
+
+--> It will return the developer code (HTML) of an active page in the browser
+
+
+Q) How to handle/work with cookies?
+========================================
+
+
+Cookie: It is a special type of file. which has the data about the server and application
+
+--> When user can launch/open the application in a specified browser then a cookie file was 		created in browser with the server and application information
+
+Note: Cookies are avialbale only for the web-based applications
+
+--> Each cookie file has the following info
+
+	name, value/content, domain, path, expire-date, secure
+
+
+Types of Cookies
+=======================
+
+1. Perminent cookies
+
+2. Temparory/ Session Cookies
+
+
 
 
 
