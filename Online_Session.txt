@@ -1716,14 +1716,14 @@ WebDriver Methods
 2. findElement(Locator)
 =====================
 
---> It will return the single WebElement which has matches with the locator information in the 		page
+--> It will return the single WebElement which has matches with the locator information in the 			page
 
 	Ex: driver.findElement(By.id("email"));
 
 3. findElements(Locator)
 =======================
 
---> It will return list of Webelememts as per the locator information (either all the types of 		elements of a page / single type of element)
+--> It will return list of Webelememts as per the locator information (either all the types of 			elements of a page / single type of element)
 
 	Single Type of elements -- tagName or xpath
 
@@ -1738,7 +1738,7 @@ WebDriver Methods
 5. quit()
 =============
 
---> It will be used to close the all the browser windows of a session which are opened through 		an automation
+--> It will be used to close the all the browser windows of a session which are opened through 			an automation
 
 6. navigate()
 =================
@@ -1755,7 +1755,7 @@ WebDriver Methods
 
 	to(URL)	-- to launch the application
 
-Note: The above methods are available in the Navigation interface which is extends by the 		WebDriver
+Note: The above methods are available in the Navigation interface which is extends by the 			WebDriver
 
 
 7. getTitle()
@@ -1774,6 +1774,14 @@ Note: The above methods are available in the Navigation interface which is exten
 
 --> It will return the developer code (HTML) of an active page in the browser
 
+10. Manage()
+
+	1. cookies
+
+	2. Window - size and position
+
+	3. timeouts() - implicitlyWait(), pageLoadTimeOut() and setScriptTimeOut()
+
 
 Q) How to handle/work with cookies?
 ========================================
@@ -1781,7 +1789,7 @@ Q) How to handle/work with cookies?
 
 Cookie: It is a special type of file. which has the data about the server and application
 
---> When user can launch/open the application in a specified browser then a cookie file was 		created in browser with the server and application information
+--> When user can launch/open the application in a specified browser then a cookie file was 			created in browser with the server and application information
 
 Note: Cookies are avialbale only for the web-based applications
 
@@ -1796,6 +1804,544 @@ Types of Cookies
 1. Perminent cookies
 
 2. Temparory/ Session Cookies
+
+
+getCookies()
+=================
+
+--> It will return the List of Cookies of an application from the browser
+
+	true - it will displays the all the information of the cookies
+
+	false	- [] (empty array)
+
+getCookieNamed(String)
+=============================
+
+--> It will return the single cookie information which has matches with the argument
+
+--> It will return "NULL" when it shouldn't matches cookie information with an argument
+
+
+addCookie(Cookie)
+=================
+
+--> Used to add a user-defined Cookie to the application
+
+Note: This method will take an argument as a "Cookie". So initialize the cookie values with the object 		reference of a cookie class
+
+	Ex: driver.addCookie(new Cookie("name","Value/content"));
+
+
+deleteAllCookies()
+=======================
+
+--> Used to delete All the Cookies of an application at a time from the browser
+
+
+deleteCookieNamed(String)
+=============================
+
+--> Used to delete a specific cookie with the name of it
+
+deleteCookie(Cookie)
+=========================
+
+--> Used to delete a specific cookie by passing the complete cookie information
+
+
+window().getSize()
+====================
+
+--> It will return the size (width,height) of the browser window which was opened through an automation
+
+
+window().setSize()
+====================
+
+--> It will set the size (width,height) of the browser window as per the user specified dimensions as 	an argument
+
+Note: User can pass the width and height values with the object reference of the dimension class
+
+
+	Ex: driver.manage().window().setSize(new Dimension(550,650));
+
+window().getPosition()
+=======================
+
+--> It will return the Position (x-co,y-co) of the browser window which was opened through an 	automation
+
+
+window().setPosition()
+=======================
+
+--> It will set the Position (x-co,y-co) of the browser window as per the user specified co-ordinates 	as an argument
+
+Note: 
+=====
+1. Always the position of a browser window can be consider from the top-left corner of the screen
+
+2. User can pass the (x-co,y-co) values with the object reference of the point class
+
+
+	Ex: driver.manage().window().setPosition(new Point(150,75));
+
+
+window().maximize()
+====================
+
+--> It will be used to maximize the browser window to the screen level
+
+
+timeouts()
+-----------
+
+implicitlyWait()
+=====================
+
+--> It is basic waiting statement of selenium, it should pause the program execution to execute the 		next statement until the user specified time. The different time intervals must be available as 	method in Timeunit static class
+
+	Ex: driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+
+pageLoadTimeout()
+======================
+
+--> It is the waiting statement of selenium, it should pause the program execution to load the current 		page completely until the user specified time.
+
+	Ex: driver.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+
+setScriptTimeout()
+=====================
+--> It is the waiting statement of selenium, it should pause the program execution to load the 			developer code of the current page completely until the user specified time.
+
+	Ex: driver.manage().timeouts().setScriptTime(5,TimeUnit.SECONDS);
+
+
+Q) Difference between Thread.sleep() and implicitWait()
+---------------------------------------------------------
+
+		Thread.sleep()				implicitlyWait()
+		---------------				------------------
+
+1. It is the Statement of java language		1. It is the statement of selenium
+
+2. It will take the time interval in 		2. Different Time intervals are available in 
+	milliSeconds					TimeUnit static class
+
+3. Declare whenever the user wants the 		3. Declare only once after launching the 
+	waiting statement between the			browser then it should be applicable
+	statements					for all the statements of the class
+
+
+11. SwitchTo()
+
+	1. Alerts (Web-based, Window-based)
+	2. Windows
+	3. Frames
+
+Q) How to work with the Alerts
+================================
+
+--> Alert is a suggestion message to the end-user based on operations on the elements
+
+--> Alerts are be the two types:
+	
+	1. web-based alerts
+	2. window-based alerts (Robot class in java, AutoIt, Sikuli)
+
+--> selenium can supports only the web-based alerts
+
+--> The elements which are available on the alert-box are not identifiable because, those 			alert-box can be developed in JavaScript. So, to operate those elements user has direct 		methods.
+
+--> TO operate the elements on the alert user has to switch the cursor from page to alert
+
+	Ex: driver.switchTo().alert().operation Method;
+
+Operation methods on alert
+--------------------------
+
+--> To take the displayed message ---- getText()
+
+	Ex: driver.switchTo().alert().getText();
+
+--> To click on the "Ok/Yes" button ---- accept()
+
+	Ex: driver.switchTo().alert().accept();
+
+--> To click on the "Cancel/No" button ---- dismiss()
+
+	Ex: driver.switchTo().alert().dismiss();
+
+Note: In rare situations user need to pass the data on the alert then
+
+	Ex: driver.switchTo().alert().sendKeys("xxxxx");
+
+
+Q) How to work with multiple windows
+======================================
+
+--> To switch the cursor from one window to another window in a session We need the id attribute value 		of the window. So, to take the "id" attribute value of the window user can use the following 		methods
+
+getWindowHandle()
+===================
+
+--> It will return the single active window "id" attribute value.		
+
+getWindowHandles()
+====================
+
+--> It will return the list of window "id" attribute values which are opened in a perticular session.
+
+Note:
+======
+
+--> The window id attribute value always in a String format (alphanumeric). The value must be unique 		and it should be changing dynamically for session to session
+
+--> While switching the cursor from one window to another window user can verify the target window 	either by element or title or url of a respective page
+
+	Ex: driver.switchTo().window("id-value");
+
+
+Q) How to work with the Frames?
+================================
+
+--> Frame is acts as a sub-page in the main page
+
+
+--> The Frames can be developed by the developer either in the "frame or iframe" tag
+
+	<html>			
+	  <head></head>		 
+	   <body> 
+
+
+	 	<iframe> 
+		 <html>
+
+		  </html>
+		</iframe>   		 
+
+	   </body>	           
+	</html>	
+
+
+NOte: whenever the user has not identified the element whith the posiibility locators then, user need 		to check that element is available in the frame or not? To confirm that from the User 			interface, right click on the element which is not identified then observe in that options 		"This Frame" is visible or not? If it is visible then, it's the confirmation that element is in 	the frame.
+
+--> The frame can be identified by the user either by using "id" or "name" attributes
+
+
+--> The elements which are available in the frame must be identified when the user has switches 		the cursor from page to frame only.
+
+	Ex: driver.switchTo().frame("id/name");
+
+
+--> If id, name attributes are not avialble to the frame/iframe tag then user need to collect 			all the frames in that page and pass the "index" value instead of id and name
+
+	Ex: driver.switchTo().frame(index);
+
+frame(String)
+==============
+
+--> Used to select and switches the cursor to the frame by it's id or name
+
+frame(int)
+==============
+
+--> Used to select and switches the cursor to the frame by it's index
+
+frame(WebElement)
+====================
+
+--> Used to select and switches the cursor to the frame by using the previous located Element
+
+defaultContent()
+====================
+
+--> USed to Select and switches the cursor to the main page or to the first frame
+
+parentFrame()
+=================
+
+--> Used to select and switches the cursor to the parent frame. This can be used when the page has 	nested frames.
+
+activeElement()
+==================
+
+--> Switches to the element that currently has focus within the document currently "switched to", or 		the body element if this cannot be detected.
+
+WebDriver Methods
+========================
+
+1. get(Url)
+
+2. findElement()
+
+3. findElements()
+
+4. close()
+
+5. quit()
+
+6. getTitle()
+
+7. getCurrentUrl()
+
+8. getPageSource()
+
+9. navigate()
+	
+	| -- to(String)
+	| -- to(Url)
+	| -- back()
+	| -- forward()
+	| -- refresh()
+
+10. manage()
+	|
+	|-- getCookies()
+	|-- getCookieNamed()
+	|-- addCookie()
+	|-- deleteAllCookies()
+	|-- deleteCookie()
+	|-- deleteCookieNamed()
+	|
+	|-- window()
+	|	|
+	|	|-- getSize()
+	|	|-- setSize()
+	|	|-- getPosition()
+	|	|-- setPosition()
+	|	|-- maximize()
+	|
+	|-- timeOuts()
+	|	|
+	|	|-- implicitlyWait()
+	|	|-- setScriptTimeOut()
+	|	|-- pageLoadTimeOut()
+
+11. switchTo()
+	|
+	|-- alert()
+	|	|
+	|	|-- getText()
+	|	|-- accept()
+	|	|-- dismiss()
+	|	|-- sendKeys()
+	|
+	|-- window()	
+	|	
+	|-- frame(int)		
+	|-- frame(String)
+	|-- frame(WebElement)
+	|-- defaultContent()
+	|-- parentFrame()
+	|-- activeElement()
+
+		
+12. getWindowHandle()
+
+13. getWindowHandles()
+
+
+==================================================
+
+Xpath
+=============
+
+--> Xpath denoted as "Xml path Representation"
+ 
+--> Xpath is one of the locator in selenium
+
+1. Absolute xpath
+
+2. Relative xpath
+
+Absolute xpath
+=====================
+
+--> The xpath which is used to identify the target element from the source element by specifying 		tagNames.
+
+--> It will gives the exact position of the target element in a page
+
+	Ex:  /html/div/span/div[2]/li/input
+
+Note: It should not identifies the target element when it will changes the position
+
+--> It will works only for the static elements. But not for the dynamic element. This will overcome 	with the relative xpath
+
+Relative xpath
+=====================
+
+--> The xpath which is used to identify the target element directly from the source code by using the 	following expression format
+
+Syntax:	.//tagaName[@attribute='value']
+
+
+	. -- active page
+
+	// -- represents the target element
+
+	tagName = target element developed tagname
+
+	@ == internal attribute
+
+
+
+1. Single Attribute
+======================
+
+.//tagName[@attribute='value']
+
+Ex: .//input[@name='firstname']
+
+2. Multiple Attributes
+==========================
+
+.//tagName[@attribute1='value'][@attribute2='value']....
+
+
+Ex: .//input[@class='inputtext _58mg _5dba _2ph-'][@name='reg_email__']
+
+
+3. Replacing the tagName with *
+===================================
+
+.//*[@attribute='value']
+
+Note: * represents any tagname in the source code
+
+
+4. text()
+=============
+
+--> It will be used in xpath expression to identify the target element with an external attribute
+
+Note: When user can use the text() method it has to give the complete text of an external attribute
+
+.//tagName[text()='value']
+
+Ex: .//a[text()='Gmail'] -- Gmail link
+
+
+5. starts-with()
+======================
+
+.//tagName[starts-with(@id,'starting-of-the-value')]
+
+.//tagName[starts-with(text(),'starting-of-the-value')]
+
+
+6. ends-with()
+=====================
+
+.//tagName[ends-with(@id,'ending-of-the-value')]
+
+.//tagName[ends-with(text(),'ending-of-the-value')]
+
+
+7. contains()
+=====================
+
+
+.//tagName[contains(@id='complete-value or patial-value')]
+
+	
+.//tagName[contains(text()='complete-value or patial-value')]
+
+
+
+8. Combination of relative and absolute
+=============================================
+
+.//tagName[@attribute='value']/tagName(s)
+
+
+
+cssSelector
+=====================
+
+	Relative-xpath				cssSelector
+	---------------				------------
+Syn: .//tagName[@attribute='value']	  tagName <notation> <value>
+
+
+1. //input[@id='email']				input#email			id => #
+
+
+2. //input[@name='firstname']			input[name='firstname']
+
+
+3. //div[@class='account']			div.account			class => .
+
+
+4. //a[text()='value'] 				a[link='value']
+
+
+5. //div[@class='abc']/span			div.abc>span			child => >
+
+
+6. //div[@id='abc']/div/a			div#abc>div>a
+
+   //div[@id='abc']//a				div#abc a			grandchild => space
+
+
+7. //tagName[starts-with(@id,'starting-value')]    tagName[id^='starting-value']   starts-with() => ^
+
+
+8. //tagName[ends-with(@name,'ending-value')] 	   tagName[name$='ending-value']   ends-with() => $
+
+
+9. //tagName[contains(@id,'partial-value')] 	   tagName[id*='partial-value']    contains() => *
+
+
+
+Q) How to handle the Dropdown Element
+=============================================
+
+--> Handling the dropdown element based on the developer tagName
+
+--> The following are the possibilities to operate dropdown element
+
+
+	Dropdown was developed			Handle/Operate with
+	-----------------------			--------------------
+
+		select tag			Select class Methods
+
+		Except select tag		Actions class Methods
+
+
+Select class Methods
+=======================
+
+1. selectByVisibleText()
+
+2. selectByIndex()
+
+3. selectByValue()
+
+4. isMultiple() -- true/false
+
+5. deSelectByVisibleText()
+
+6. deselectByIndex()
+
+7. deselectByValue()
+
+8. getOptions()
+
+9. getAllSelectedOptions()
+
+10. getFirstSelectedOption()
+
+11. deSelectAll()
+
+
+
+
+
+
+
 
 
 
